@@ -1,0 +1,42 @@
+h1 {
+    font-size: 100px;
+    margin: 80px auto;
+    font-weight: 600;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    color: coral;
+}
+
+.grid-container {
+    columns: 5 200px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.grid-container div {
+    width: 150px;
+    display: inline-block;
+    width: 100%;
+}
+
+.grid-container img {
+    width: 100%;
+}
+
+.grid-container p {
+    padding: 0;
+    text-align: center;
+    font-style: italic;
+}

@@ -1,0 +1,428 @@
+html {
+    min-height: 100vh;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Nunito", sans-serif;
+    font-weight: 300;
+    color: #222831;
+    background-color: #eeeeee;
+    min-height: 100vh;
+}
+
+.nav-icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 16px;
+    transition: all 0.3s linear;
+}
+
+.nav-toggle {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.nav-bar {
+    display: flex;
+    position: fixed;
+    top: 0;
+    background-color: #00adb5;
+    width: 100%;
+    transition: opacity 1s linear;
+    z-index: 10;
+}
+
+.nav-toggle-item {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-brand {
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.75rem;
+    font-weight: 400;
+    margin: 3px 6px;
+}
+
+.nav-brand a {
+    color: #eeeeee;
+}
+
+.nav-brand a:hover {
+    color: #f07b3f;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    margin: auto 10px;
+    transition: all 1s;
+}
+
+.nav-item li:last-child {
+    margin-left: auto;
+}
+
+.nav-link {
+    font-size: 1.25em;
+    margin: 3px 6px;
+}
+
+.nav-link:hover {
+    color: #f07b3f;
+}
+
+a.nav-link {
+    color: #eeeeee;
+}
+
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    transition-duration: 0.3s;
+    transition-property: transform;
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active {
+    transform: scale(1.1);
+}
+
+.opening {
+    padding-top: 50px;
+    height: 550px;
+    display: block;
+    background-image: url('https://cdn.sstatic.net/Img/home/illo-hero-full.svg?v=e2018a5f9272');
+    background-position: center;
+    background-position-y: 50px;
+    background-color: #ffcf10;
+    background-repeat: no-repeat;
+}
+
+.slogan-container {
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.slogan {
+    font-size: 4.5rem;
+    font-weight: 800;
+    margin-bottom: .5em;
+}
+
+.opening p {
+    max-width: 30rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    line-height: 1.5em;
+}
+
+.head-btn {
+    padding: .75em 1.25em;
+    border: 1px solid #f07b3f;
+    margin: 0 8px;
+    border-radius: 3px;
+}
+
+#browse {
+    color: #f07b3f;
+    background-color: white;
+    transition: all .2s;
+}
+
+#browse:hover {
+    color: white;
+    background-color: #f07b3f;
+    transition: all .2s;
+}
+
+#upload {
+    color: white;
+    background-color: #f07b3f;
+}
+
+.upload {
+    color: white;
+    background-color: #f07b3f;
+    padding: .75em 1.25em;
+    border: 1px solid #f07b3f;
+    margin: 0 8px;
+    border-radius: 3px;
+}
+
+.upload:hover {
+    color: #f07b3f;
+    background-color: white;
+}
+
+#upload:hover {
+    color: #f07b3f;
+    background-color: white;
+}
+
+.for-memers {
+    display: block;
+    margin-top: 64px;
+    text-align: center;
+}
+
+.for-memers .slogan {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.for-memers p {
+    font-size: 1.25rem;
+    line-height: 1.5em;
+    max-width: 40rem;
+    margin: auto;
+    margin-top: 16px;
+    margin-bottom: 32px;
+}
+
+.for-memers p a {
+    color: #00adb5;
+    font-weight: 600;
+}
+
+.for-memers p a:hover {
+    color: #f07b3f;
+}
+
+.small-block {
+    width: 64px;
+    height: 8px;
+    display: block;
+    margin: auto;
+    background-color: #00adb5;
+    border-radius: 1000px;
+}
+
+.grid {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    margin-bottom: 64px;
+}
+
+.icon {
+    margin: 16px;
+    width: 64px;
+    height: 64px;
+}
+
+.grid-cell {
+    border: 2px solid #222831;
+    border-radius: 5px;
+    margin: 0 16px;
+    padding: 32px;
+}
+
+.grid-cell-side {
+    margin-top: 50px;
+}
+
+.grid-cell h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 8px auto;
+}
+
+.grid-cell p {
+    font-size: 1rem;
+    padding: 16px;
+    line-height: 150%;
+}
+
+.grid-btn {
+    padding: .75em 1.5em;
+    border-radius: 4px;
+    color: #eeeeee;
+    background-color: #11999e;
+    transition: all .25s;
+}
+
+.grid-btn:hover {
+    background-color: #00adb5;
+}
+
+footer {
+    margin-top: auto;
+    bottom: 0;
+    width: 100%;
+    display: block;
+    background-color: #222831;
+    color: #eee;
+}
+
+.footer-content {
+    height: 150px;
+    margin: 25px 25px 0px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-item {
+    display: flex;
+}
+
+.footer-item li {
+    margin: 0 16px;
+}
+
+.footer-item li a {
+    color: #eee;
+}
+
+@media(max-width:1024px) {
+    .nav-link {
+        font-size: 1.15rem;
+    }
+    .nav-brand {
+        font-size: 1.6rem;
+    }
+    .slogan-container .slogan {
+        font-size: 4rem;
+    }
+    .slogan-container p {
+        font-size: 1.35rem;
+    }
+    .for-memers .slogan {
+        font-size: 2.25rem;
+    }
+    .for-memers p {
+        font-size: 1.15rem;
+    }
+    .grid-cell h3 {
+        font-size: 1.15rem;
+    }
+    .grid-cell p {
+        font-size: 1rem;
+    }
+    .grid-cell {
+        padding: 0;
+        padding-bottom: 32px;
+        margin: 8px;
+    }
+    .grid-cell-side {
+        margin-top: 32px;
+    }
+}
+
+@media(max-width:768px) {
+    .nav-bar,
+    .nav-item,
+    .nav-link,
+    .nav-login-item {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .nav-item li:last-child {
+        margin-left: 0;
+    }
+    .nav-item {
+        display: none;
+    }
+    .nav-toggle {
+        margin-top: 14px;
+        align-self: flex-end;
+        display: initial;
+        position: absolute;
+        cursor: pointer;
+    }
+    .navToggleShow {
+        display: flex;
+    }
+    .nav-link {
+        line-height: 2;
+    }
+    .for-memers p {
+        margin: 16px 32px;
+    }
+    .grid-cell-side {
+        margin-top: 0;
+    }
+    .grid {
+        flex-direction: column;
+    }
+    .grid-cell {
+        padding: 16px;
+        padding-bottom: 24px;
+        margin: 8px;
+    }
+}
+
+@media(max-width:476px) {
+    .slogan-container .slogan {
+        font-size: 3rem;
+    }
+    .slogan-container p {
+        font-size: 1.25rem;
+    }
+    .head-btn {
+        font-size: .8rem;
+    }
+    .for-memers .slogan {
+        font-size: 2rem;
+    }
+    .for-memers p {
+        font-size: 1rem;
+    }
+    .grid-cell h3 {
+        font-size: 1rem;
+    }
+    .grid-cell p {
+        font-size: 1rem;
+        margin: 0;
+    }
+    .grid-cell {
+        padding: 4px;
+        padding-bottom: 24px;
+        margin: 4px;
+    }
+}

@@ -1,0 +1,52 @@
+<%- include('partials/head') %>
+
+    <%- include('partials/navbar')  %>
+
+        <section class='opening'>
+            <div class='slogan-container'>
+                <h1 class='slogan'>We
+                    <span>&lt;3</span> memes
+                </h1>
+                <p>
+                    We build products that empower memers and connect them to solutions that enable productivity, growth, and discovery.
+                </p>
+                <div class='opening-btn'>
+                    <a class='head-btn' id=browse href="/template">Browse Template</a>
+                    <label style="cursor: pointer;" class="upload" for="upload" class=' head-btn'>Upload Template</label>
+                    <input id='upload' type="file" style="display:none;">
+                </div>
+            </div>
+        </section>
+        <section class='for-memers'>
+            <h2 class='slogan'>For memers, by memers</h2>
+            <div class=" small-block "> </div>
+            <p>Stack Overmeme is an
+                <a href=" # ">free website</a> for anyone that likes memes. We help you create your dankest memes, share memes with your co-memers, and find your next meme template.</p>
+            <div class=" grid ">
+                <div class=" grid-cell grid-cell-side ">
+                    <img class='icon' src=" img/browse.png " alt=" ">
+                    <h3>Browse Template</h3>
+                    <p>Level up your dank level using my own meme templates. It ain't much, but it's honest work</p>
+                    <a href="/template " class=" btn grid-btn ">Browse Template</a>
+                </div>
+                <div class=" grid-cell ">
+                    <img class='icon' src=" img/faq.png " alt=" ">
+                    <h3>FAQ</h3>
+                    <p>Feeling like a monkey questioning everything? Maybe you can find your answer availabe here</p>
+                    <a href=" /term " class=" btn grid-btn ">Try for free</a>
+                </div>
+                <div class=" grid-cell grid-cell-side ">
+                    <img class='icon' src=" img/upload.png " alt=" ">
+                    <h3>Browse All Memes</h3>
+                    <p>Want to be a special snowflake and show off your cringe? It's fine, just browse your own template here</p>
+                    <label style="cursor: pointer;" class=" btn grid-btn" for="upload-link">Upload Template</label>
+                    <input id='upload-link' type="file" style="display:none;">
+                </div>
+        </section>
+        <%- include('partials/footer') %>
+            <script src="/jquery/jquery-3.5.1.min.js "></script>
+            <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js "></script>
+            <script src="/appjs.js"></script>
+            </body>
+
+            </html>
