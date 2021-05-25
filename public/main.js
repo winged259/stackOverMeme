@@ -111,3 +111,25 @@ $('#generate-meme').off('click').on('click', function() {
     link.click();
     document.body.removeChild(link);
 })
+
+$('#add-image').off('input').on('input', function() {
+    const file = this.files[0];
+    const fileType = file['type'];
+    $('#add-image').val('')
+
+    const reader = new FileReader()
+    reader.onload = function() {
+        var image = new Image()
+        image.src = reader.result
+        image.onload = function() {
+            fabric.Image.fromURL(reader.result, function(image) {
+                image.scaleToWidth(canvas.width / 2)
+                canvas.add(image).setActiveObject(image);
+                $('#scale').val(image.scaleX)
+            }, {
+                opacity: $('#opacity').val()
+            })
+        }
+    }
+    reader.readAsDataURL(file)
+})
