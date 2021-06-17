@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const { stringify } = require('qs');
 const Schema = mongoose.Schema;
 
 const MemeSchema = new Schema({

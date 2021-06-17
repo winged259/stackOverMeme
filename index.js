@@ -1,10 +1,16 @@
+if (process.env.NODE_ENV !== "production") {
+    require('dotenv').config()
+}
+
 const express = require('express');
 const app = express();
 const path = require('path');
 const mongoose = require('mongoose');
-const Memeground = require('./models/memeground');
-const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
+
+const template = require('./routes/template')
+const create = require('./routes/create')
+
 
 mongoose.connect('mongodb://localhost:27017/stackOverMeme', {
     useNewUrlParser: true,
@@ -31,39 +37,9 @@ app.get('/', (req, res) => {
     res.render('meme')
 })
 
-app.get('/template', async(req, res) => {
-    const template = await Memeground.find({});
-    res.render('template/index.ejs', { template })
-})
+app.use('/template', template)
+app.use('/create', create)
 
-app.get('/template/new', (req, res) => {
-    res.render('template/new');
-})
-app.post('/template', async(req, res) => {
-    const template = new Memeground(req.body.template)
-    await template.save();
-    res.redirect(`/template/${template._id}`)
-})
-
-app.get('/create/:id', async(req, res) => {
-    const meme = await Memeground.findById(req.params.id);
-    res.render('create/new', { meme })
-})
-app.post('/create', async(req, res) => {
-    const newMeme = new Memeground({
-        height: req.body.height,
-        width: req.body.width,
-        url: req.body.url,
-    })
-    await newMeme.save();
-    let temp = newMeme._id;
-    res.redirect(`/create/${temp}`)
-})
-app.delete('/template/:id', async(req, res) => {
-    const { id } = req.params;
-    await Memeground.findByIdAndDelete(id);
-    res.redirect('/template');
-})
 
 app.get('/term', (req, res) => {
     res.render('term')

@@ -53,8 +53,10 @@ const canvas = new fabric.Canvas('canvas-wrapper', {
     width: 500,
     height: 500 * memeInfo.height / memeInfo.width,
     selection: false,
-    allowTouchScrolling: true
+    allowTouchScrolling: true,
+    isDrawingMode: false
 });
+fabric.Object.prototype.transparentCorners = false;
 
 $(window).resize(resizeCanvas);
 
@@ -65,13 +67,16 @@ function resizeCanvas() {
 }
 resizeCanvas();
 
-fabric.Image.fromURL(`${memeInfo.url}`, function(meme) {
+function addBackground() {
+    fabric.Image.fromURL(`${memeInfo.url}`, function(meme) {
 
-    meme.scaleToWidth(500);
-    canvas.setBackgroundImage(meme, canvas.renderAll.bind(canvas))
-}, {
-    crossOrigin: "anonymous"
-});
+        meme.scaleToWidth(500);
+        canvas.setBackgroundImage(meme, canvas.renderAll.bind(canvas))
+    }, {
+        crossOrigin: "anonymous"
+    });
+}
+addBackground();
 $('#add-text').off('click').on('click', function() {
     if ($('#text').val() == '') {
         alert('Error! Text field is empty')

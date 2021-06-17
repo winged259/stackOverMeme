@@ -64,6 +64,29 @@
                             <button style="cursor: pointer;" class="btn btn-3" id="add-text">Add text</button>
                             <input type="file" style="display:none;" id="add-image">
                             <label class="btn btn-3" style="cursor: pointer;" for="add-image">Add Image</label>
+                            <button id="clear-canvas" class='btn btn-3'>Delete</button>
+
+                        </div>
+                        <div>
+                            <button id="drawing-mode" class="btn btn-3">Enter drawing mode</button>
+                            <div id="drawing-mode-options" style="display:none">
+                                <div class="draw-form">
+                                    <label for="drawing-mode-selector">Mode:</label>
+                                    <select id="drawing-mode-selector">
+                                    <option>Pencil</option>
+                                    <option>Circle</option>
+                                    <option>Spray</option>
+                                </select>
+                                </div>
+                                <div class="draw-form">
+                                    <label for="drawing-line-width">Line width:</label>
+                                    <input type="range" value="10" min="0" max="150" id="drawing-line-width">
+                                </div>
+                                <div class="draw-form">
+                                    <label for="drawing-color">Line color:</label>
+                                    <input type="color" value="#ffffff" id="drawing-color" class="colorpicker">
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div>
@@ -94,6 +117,7 @@
             </script>
             <script src="/main.js"></script>
             <script src="/appjs.js "></script>
+            <script src="/freedraw.js"></script>
 </body>
 
 </html>

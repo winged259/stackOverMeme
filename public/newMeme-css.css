@@ -153,3 +153,16 @@ textarea {
         margin: 4px;
     }
 }
+
+.drawing-mode-option {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-3 {
+    margin-top: 8px;
+}
+
+.draw-form {
+    margin: 4px 0;
+}
