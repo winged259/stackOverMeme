@@ -7,7 +7,7 @@ const MemeSchema = new Schema({
     url: String,
     width: Number,
     height: Number,
-    box_count: Number
+
 });
 
 
